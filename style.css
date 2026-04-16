@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f1117;
+  --bg2: #1a1d27;
+  --accent: #5b8dee;
+  --text: #e0e0e0;
+  --muted: #888;
+  --border: #2a2d3e;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  z-index: 100;
+}
+
+.nav-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav ul a:hover {
+  color: var(--accent);
+}
+
+/* SECTIONS */
+section {
+  padding: 5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:nth-child(odd) {
+  background-color: var(--bg);
+}
+
+section:nth-child(even) {
+  background-color: var(--bg2);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+p {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #3a6fd8;
+}
+
+/* LINKS */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  background-color: var(--bg2);
+}
