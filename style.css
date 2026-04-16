@@ -326,6 +326,16 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.tl-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+  background-color: var(--bg3);
+  padding: 3px;
+  flex-shrink: 0;
+}
+
 .tl-date {
   color: var(--accent);
   font-size: 0.82rem;
