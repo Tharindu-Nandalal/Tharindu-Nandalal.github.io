@@ -10,27 +10,35 @@
 
   <nav>
     <div class="nav-name">Tharindu Nandalal</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+    <ul id="nav-links">
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#research" onclick="closeMenu()">Research</a></li>
+      <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+      <li><a href="#cv" onclick="closeMenu()">CV</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- ABOUT -->
   <section id="about">
-    <div class="container">
-      <h1>Tharindu Nandalal</h1>
-      <p class="subtitle">PhD Researcher · Institute for Engineering and Computational Mechanics (ITM) · University of Stuttgart</p>
-      <p>
-        I am a PhD student working on computational and experimental modelling of classical guitars.
-        My research focuses on finite element modelling of guitar soundboards, structural dynamics,
-        and the influence of wood material variability on acoustic performance.
-      </p>
+    <div class="container about-grid">
+      <div class="about-photo">
+        <img src="photo.jpg" alt="Tharindu Nandalal" />
+      </div>
+      <div class="about-text">
+        <h1>Tharindu Nandalal</h1>
+        <p class="subtitle">PhD Researcher · Institute for Engineering and Computational Mechanics (ITM) · University of Stuttgart</p>
+        <p>
+          I am a PhD student working on computational and experimental modelling of classical guitars.
+          My research focuses on finite element modelling of guitar soundboards, structural dynamics,
+          and the influence of wood material variability on acoustic performance.
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- RESEARCH -->
   <section id="research">
     <div class="container">
       <h2>Research</h2>
@@ -53,21 +61,37 @@
     </div>
   </section>
 
+  <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="container">
       <h2>Publications</h2>
-      <p class="muted">Publications will be listed here.</p>
+
+      <div class="publication">
+        <span class="pub-year">2025</span>
+        <div class="pub-details">
+          <p class="pub-title">Title of Your Paper Goes Here</p>
+          <p class="pub-authors">T. Nandalal, Co-Author Name</p>
+          <p class="pub-venue">Journal / Conference Name, Vol. X, pp. XX–XX</p>
+          <div class="pub-links">
+            <a href="#" class="pub-tag">PDF</a>
+            <a href="#" class="pub-tag">DOI</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- CV -->
   <section id="cv">
     <div class="container">
       <h2>CV</h2>
-      <p>Download my CV below.</p>
+      <p>Download my full curriculum vitae below.</p>
       <a class="btn" href="cv.pdf" target="_blank">Download CV (PDF)</a>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
@@ -81,6 +105,15 @@
   <footer>
     <p>&copy; 2026 Tharindu Nandalal</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('nav-links').classList.remove('open');
+    }
+  </script>
 
 </body>
 </html>
