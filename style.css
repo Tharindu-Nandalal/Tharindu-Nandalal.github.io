@@ -127,7 +127,7 @@ section:nth-child(even) {
 
 h2 {
   font-size: 2rem;
-  color: var(--accent);
+  color: var(--text);
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border);
