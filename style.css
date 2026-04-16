@@ -205,6 +205,74 @@ h1 {
   font-size: 0.97rem;
 }
 
+/* ABOUT BOTTOM — Interests + Education */
+.about-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.about-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+}
+
+.about-card h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.about-card h3 i {
+  margin-right: 0.5rem;
+}
+
+.interest-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interest-list li {
+  color: var(--text2);
+  font-size: 0.92rem;
+  padding: 0.2rem 0;
+}
+
+.interest-list li::before {
+  content: "▸ ";
+  color: var(--accent);
+}
+
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.edu-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-list li:last-child {
+  border-bottom: none;
+}
+
+.edu-degree {
+  display: block;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.edu-org {
+  display: block;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
 /* EXPERIENCE */
 .experience-item {
   display: flex;
@@ -296,6 +364,13 @@ h1 {
   margin-bottom: 0.6rem;
 }
 
+.pub-abstract {
+  color: var(--text2);
+  font-size: 0.88rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
 .pub-links {
   display: flex;
   gap: 0.5rem;
@@ -351,29 +426,34 @@ h1 {
   border-color: var(--accent);
 }
 
-.talk-date-block {
-  min-width: 55px;
-  text-align: center;
-  background-color: var(--accent);
+.talk-thumb {
+  min-width: 70px;
+  height: 70px;
+  background-color: var(--bg3);
   border-radius: 8px;
-  padding: 0.4rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--accent);
+  opacity: 0.6;
 }
 
-.talk-month {
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.95rem;
+.talk-desc {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
 }
 
 .talk-event {
-  color: var(--accent);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.85rem;
   margin-bottom: 0.2rem;
 }
 
-.talk-location {
-  color: var(--muted);
-  font-size: 0.88rem;
+.talk-venue {
+  color: var(--accent);
+  font-size: 0.85rem;
 }
 
 /* BLOG */
@@ -499,4 +579,9 @@ footer {
 
   .pub-card { flex-direction: column; }
   .pub-thumb { width: 100%; height: 80px; }
+
+  .about-bottom { grid-template-columns: 1fr; }
+
+  .talk-card { flex-direction: column; }
+  .talk-thumb { width: 100%; height: 80px; }
 }

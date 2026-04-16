@@ -14,11 +14,11 @@
     <div class="nav-name">Tharindu Danushka Nandalal</div>
     <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
     <ul id="nav-links">
-      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#about" onclick="closeMenu()">Home</a></li>
       <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-      <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
-      <li><a href="#talks" onclick="closeMenu()">Talks</a></li>
       <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
+      <li><a href="#talks" onclick="closeMenu()">Talks</a></li>
+      <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
     <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
@@ -26,28 +26,67 @@
     </button>
   </nav>
 
-  <!-- HERO -->
+  <!-- ABOUT / HOME -->
   <section id="about">
-    <div class="container hero-grid">
-      <div class="hero-photo">
-        <img src="my_dp.png" alt="Tharindu Danushka Nandalal" />
-        <div class="social-links">
-          <a href="mailto:tharindu.nandalal@itm.uni-stuttgart.de" title="Email"><i class="fa fa-envelope"></i></a>
-          <a href="https://github.com/Tharindu-Nandalal" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/tharindudanushka/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="cv.pdf" target="_blank" title="CV"><i class="fa fa-file-pdf"></i></a>
+    <div class="container">
+
+      <div class="hero-grid">
+        <div class="hero-photo">
+          <img src="my_dp.png" alt="Tharindu Danushka Nandalal" />
+          <div class="social-links">
+            <a href="mailto:tharindu.nandalal@itm.uni-stuttgart.de" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://github.com/Tharindu-Nandalal" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tharindudanushka/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="cv.pdf" target="_blank" title="Download CV"><i class="fa fa-file-pdf"></i></a>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1>Tharindu Danushka Nandalal</h1>
+          <p class="subtitle">PhD Researcher in Computational Mechanics</p>
+          <p class="affiliation">
+            <i class="fa fa-building"></i>
+            <a href="https://www.itm.uni-stuttgart.de" target="_blank">Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</a>
+          </p>
+          <p class="bio">
+            I am a PhD student working on computational and experimental modelling of classical guitars.
+            My research focuses on parametric finite element modelling of guitar soundboards, structural dynamics,
+            and the influence of wood material variability on vibroacoustic performance.
+          </p>
         </div>
       </div>
-      <div class="hero-text">
-        <h1>Tharindu Danushka Nandalal</h1>
-        <p class="subtitle">PhD Researcher in Computational Mechanics</p>
-        <p class="affiliation"><i class="fa fa-building"></i> Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</p>
-        <p class="bio">
-          I am a PhD student working on computational and experimental modelling of classical guitars.
-          My research focuses on finite element modelling of guitar soundboards, structural dynamics,
-          and the influence of wood material variability on acoustic performance.
-        </p>
+
+      <!-- Interests + Education -->
+      <div class="about-bottom">
+        <div class="about-card">
+          <h3><i class="fa fa-microscope"></i> Interests</h3>
+          <ul class="interest-list">
+            <li>Finite Element Methods</li>
+            <li>Structural Dynamics &amp; Modal Analysis</li>
+            <li>Model Order Reduction</li>
+            <li>Wood Material Variability</li>
+            <li>Guitar Acoustics &amp; Vibroacoustics</li>
+            <li>Experimental Validation (Laser Vibrometry)</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3><i class="fa fa-graduation-cap"></i> Education</h3>
+          <ul class="edu-list">
+            <li>
+              <span class="edu-degree">PhD in Computational Mechanics</span>
+              <span class="edu-org">University of Stuttgart, 2023 – Present</span>
+            </li>
+            <li>
+              <span class="edu-degree">MSc in Computational Mechanics (COMMAS)</span>
+              <span class="edu-org">University of Stuttgart, 2020 – 2023</span>
+            </li>
+            <li>
+              <span class="edu-degree">BSc in Mechanical Engineering</span>
+              <span class="edu-org">University of Moratuwa, Sri Lanka</span>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -57,76 +96,32 @@
       <h2>Experience</h2>
 
       <div class="experience-item">
-        <div class="exp-logo">
-          <i class="fa fa-university exp-icon"></i>
-        </div>
+        <div class="exp-logo"><i class="fa fa-flask exp-icon"></i></div>
         <div class="exp-details">
           <h3>PhD Researcher</h3>
-          <p class="exp-org">Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</p>
+          <p class="exp-org"><a href="https://www.itm.uni-stuttgart.de" target="_blank">Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</a></p>
           <p class="exp-date"><i class="fa fa-calendar"></i> 2023 – Present &nbsp;·&nbsp; Stuttgart, Germany</p>
-          <p>Computational and experimental modelling of classical guitars. FE modelling, modal analysis, wood material variability, and soundboard optimisation.</p>
+          <p>Computational and experimental modelling of classical guitars. Parametric FE modelling, reduced-order models, wood material variability, modal analysis, and soundboard shape optimisation.</p>
         </div>
       </div>
 
       <div class="experience-item">
-        <div class="exp-logo">
-          <i class="fa fa-graduation-cap exp-icon"></i>
-        </div>
+        <div class="exp-logo"><i class="fa fa-graduation-cap exp-icon"></i></div>
         <div class="exp-details">
-          <h3>MSc in Computational Mechanics</h3>
-          <p class="exp-org">University of Stuttgart</p>
+          <h3>MSc Student — Computational Mechanics (COMMAS)</h3>
+          <p class="exp-org"><a href="https://www.uni-stuttgart.de" target="_blank">University of Stuttgart</a></p>
           <p class="exp-date"><i class="fa fa-calendar"></i> 2020 – 2023 &nbsp;·&nbsp; Stuttgart, Germany</p>
-          <p>Master's degree in Computational Mechanics of Materials and Structures (COMMAS).</p>
+          <p>Master's programme in Computational Mechanics of Materials and Structures. Thesis on parametric FE modelling for guitar soundboard optimisation.</p>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <div class="container">
-      <h2>Publications</h2>
-
-      <div class="pub-card">
-        <div class="pub-thumb">
-          <i class="fa fa-file-alt"></i>
-        </div>
-        <div class="pub-body">
-          <p class="pub-title">Geometrically parameterized reduced-order finite element model for guitar soundboard shape optimization</p>
-          <p class="pub-authors">Nandalal, T. D.; Cillo, P.; Ziegler, P.; Eberhard, P.</p>
-          <p class="pub-venue">Acta Acustica, 2025</p>
-          <div class="pub-links">
-            <a href="https://doi.org/10.1051/aacus/2025040" target="_blank" class="pub-tag"><i class="fa fa-external-link-alt"></i> DOI</a>
-            <button class="pub-tag" onclick="toggleCite('cite1')"><i class="fa fa-quote-right"></i> Cite</button>
-          </div>
-          <div class="cite-box" id="cite1">
-@article{nandalal2025guitar,
-  author  = {Nandalal, T. D. and Cillo, P. and Ziegler, P. and Eberhard, P.},
-  title   = {Geometrically parameterized reduced-order finite element model for guitar soundboard shape optimization},
-  journal = {Acta Acustica},
-  year    = {2025},
-  doi     = {10.1051/aacus/2025040}
-}</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TALKS -->
-  <section id="talks">
-    <div class="container">
-      <h2>Talks</h2>
-
-      <div class="talk-card">
-        <div class="talk-date-block">
-          <span class="talk-month">2025</span>
-        </div>
-        <div class="talk-details">
-          <h3>Talk Title Goes Here</h3>
-          <p class="talk-event"><i class="fa fa-microphone"></i> Conference / Workshop Name</p>
-          <p class="talk-location"><i class="fa fa-map-marker-alt"></i> City, Country</p>
+      <div class="experience-item">
+        <div class="exp-logo"><i class="fa fa-university exp-icon"></i></div>
+        <div class="exp-details">
+          <h3>BSc in Mechanical Engineering</h3>
+          <p class="exp-org">University of Moratuwa, Sri Lanka</p>
+          <p class="exp-date"><i class="fa fa-calendar"></i> 2014 – 2019 &nbsp;·&nbsp; Moratuwa, Sri Lanka</p>
+          <p>Undergraduate degree in Mechanical Engineering.</p>
         </div>
       </div>
 
@@ -136,7 +131,7 @@
   <!-- BLOG -->
   <section id="blog">
     <div class="container">
-      <h2>Blog</h2>
+      <h2>Recent Posts</h2>
       <div class="blog-grid">
 
         <div class="blog-card">
@@ -150,6 +145,54 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- TALKS -->
+  <section id="talks">
+    <div class="container">
+      <h2>Talks</h2>
+
+      <div class="talk-card">
+        <div class="talk-thumb"><i class="fa fa-microphone-alt"></i></div>
+        <div class="talk-details">
+          <h3>Talk Title Goes Here</h3>
+          <p class="talk-desc">Short description of the talk or presentation topic.</p>
+          <p class="talk-event"><i class="fa fa-calendar"></i> 2025 &nbsp;·&nbsp; <i class="fa fa-map-marker-alt"></i> City, Country</p>
+          <p class="talk-venue"><i class="fa fa-microphone"></i> Conference / Workshop Name</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="container">
+      <h2>Featured Publications</h2>
+
+      <div class="pub-card">
+        <div class="pub-thumb"><i class="fa fa-file-alt"></i></div>
+        <div class="pub-body">
+          <p class="pub-title">Geometrically parameterized reduced-order finite element model for guitar soundboard shape optimization</p>
+          <p class="pub-authors">Nandalal, T. D.; Cillo, P.; Ziegler, P.; Eberhard, P.</p>
+          <p class="pub-venue">Acta Acustica, 2025</p>
+          <p class="pub-abstract">A parametric reduced-order finite element model is developed for the shape optimisation of classical guitar soundboards. The approach combines geometrically parameterized meshes with model order reduction techniques to enable efficient exploration of the design space while preserving vibroacoustic accuracy.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1051/aacus/2025040" target="_blank" class="pub-tag"><i class="fa fa-external-link-alt"></i> DOI</a>
+            <button class="pub-tag" onclick="toggleCite('cite1')"><i class="fa fa-quote-right"></i> Cite</button>
+          </div>
+          <div class="cite-box" id="cite1">@article{nandalal2025guitar,
+  author  = {Nandalal, T. D. and Cillo, P. and Ziegler, P. and Eberhard, P.},
+  title   = {Geometrically parameterized reduced-order finite element model
+             for guitar soundboard shape optimization},
+  journal = {Acta Acustica},
+  year    = {2025},
+  doi     = {10.1051/aacus/2025040}
+}</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -177,7 +220,6 @@
   </footer>
 
   <script>
-    // Theme toggle
     function toggleTheme() {
       const html = document.documentElement;
       const icon = document.getElementById('theme-icon');
@@ -192,12 +234,10 @@
       }
     }
 
-    // Load saved theme (default: dark)
     const saved = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', saved);
     document.getElementById('theme-icon').className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
 
-    // Mobile nav
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('open');
     }
@@ -205,7 +245,6 @@
       document.getElementById('nav-links').classList.remove('open');
     }
 
-    // Cite box toggle
     function toggleCite(id) {
       const box = document.getElementById(id);
       box.style.display = box.style.display === 'block' ? 'none' : 'block';
