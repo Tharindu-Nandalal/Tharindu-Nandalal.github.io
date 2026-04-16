@@ -273,87 +273,57 @@ h1 {
   font-size: 0.83rem;
 }
 
-/* EXPERIENCE TIMELINE */
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background-color: var(--border);
-}
-
-.tl-item {
-  position: relative;
-  margin-bottom: 1.2rem;
-}
-
-.tl-dot {
-  position: absolute;
-  left: -1.85rem;
-  top: 1.1rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--accent);
-  border: 2px solid var(--bg);
-  z-index: 1;
-}
-
-.tl-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.1rem 1.4rem;
-  transition: border-color 0.2s;
-}
-
-.tl-card:hover {
-  border-color: var(--accent);
-}
-
-.tl-header {
+/* EXPERIENCE */
+.exp-list {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  gap: 0;
 }
 
-.tl-logo {
-  width: 52px;
-  height: 52px;
+.exp-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+}
+
+.exp-logo {
+  width: 56px;
+  height: 56px;
   border-radius: 8px;
   object-fit: contain;
-  background-color: var(--bg3);
-  padding: 4px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 5px;
   flex-shrink: 0;
 }
 
-.tl-date {
-  color: var(--accent);
-  font-size: 0.82rem;
-  white-space: nowrap;
-  padding-top: 3px;
-  font-weight: 600;
+.exp-body h3 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
 }
 
 .exp-org {
-  color: var(--text2);
-  font-size: 0.88rem;
-  margin-top: 0.15rem;
+  font-size: 0.92rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
 }
 
-.exp-date {
-  color: var(--muted);
+.exp-meta {
   font-size: 0.85rem;
-  margin-bottom: 0.5rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.exp-desc {
+  font-size: 0.92rem;
+  color: var(--text2);
 }
 
 /* PUBLICATIONS */
@@ -626,6 +596,6 @@ footer {
   .talk-card { flex-direction: column; }
   .talk-thumb { width: 100%; height: 80px; }
 
-  .tl-header { flex-direction: column; gap: 0.3rem; }
-  .tl-date { white-space: normal; }
+  .exp-item { gap: 1rem; }
+  .exp-logo { width: 44px; height: 44px; }
 }
