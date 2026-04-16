@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tharindu Nandalal</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <div class="nav-name">Tharindu Nandalal</div>
     <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
     <ul id="nav-links">
       <li><a href="#about" onclick="closeMenu()">About</a></li>
-      <li><a href="#research" onclick="closeMenu()">Research</a></li>
+      <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
       <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
-      <li><a href="#cv" onclick="closeMenu()">CV</a></li>
+      <li><a href="#talks" onclick="closeMenu()">Talks</a></li>
+      <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+      <i class="fa fa-sun" id="theme-icon"></i>
+    </button>
   </nav>
 
-  <!-- ABOUT -->
+  <!-- HERO -->
   <section id="about">
-    <div class="container about-grid">
-      <div class="about-photo">
+    <div class="container hero-grid">
+      <div class="hero-photo">
         <img src="my_dp.png" alt="Tharindu Nandalal" />
+        <div class="social-links">
+          <a href="mailto:tharindu.nandalal@itm.uni-stuttgart.de" title="Email"><i class="fa fa-envelope"></i></a>
+          <a href="https://github.com/Tharindu-Nandalal" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="cv.pdf" target="_blank" title="CV"><i class="fa fa-file-pdf"></i></a>
+        </div>
       </div>
-      <div class="about-text">
+      <div class="hero-text">
         <h1>Tharindu Nandalal</h1>
-        <p class="subtitle">PhD Researcher · Institute for Engineering and Computational Mechanics (ITM) · University of Stuttgart</p>
-        <p>
+        <p class="subtitle">PhD Researcher in Computational Mechanics</p>
+        <p class="affiliation"><i class="fa fa-building"></i> Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</p>
+        <p class="bio">
           I am a PhD student working on computational and experimental modelling of classical guitars.
           My research focuses on finite element modelling of guitar soundboards, structural dynamics,
           and the influence of wood material variability on acoustic performance.
@@ -38,26 +50,35 @@
     </div>
   </section>
 
-  <!-- RESEARCH -->
-  <section id="research">
+  <!-- EXPERIENCE -->
+  <section id="experience">
     <div class="container">
-      <h2>Research</h2>
-      <div class="card">
-        <h3>FE Modelling of Guitar Soundboards</h3>
-        <p>Development of parametric finite element models for classical guitar top plates, including morphing mesh strategies and modal analysis.</p>
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <div class="exp-logo">
+          <i class="fa fa-university exp-icon"></i>
+        </div>
+        <div class="exp-details">
+          <h3>PhD Researcher</h3>
+          <p class="exp-org">Institute for Engineering and Computational Mechanics (ITM), University of Stuttgart</p>
+          <p class="exp-date"><i class="fa fa-calendar"></i> 2023 – Present &nbsp;·&nbsp; Stuttgart, Germany</p>
+          <p>Computational and experimental modelling of classical guitars. FE modelling, modal analysis, wood material variability, and soundboard optimisation.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Wood Material Variability</h3>
-        <p>Investigating the effect of natural wood property variability on the vibroacoustic behaviour of guitar soundboards using sampling and uncertainty quantification methods.</p>
+
+      <div class="experience-item">
+        <div class="exp-logo">
+          <i class="fa fa-graduation-cap exp-icon"></i>
+        </div>
+        <div class="exp-details">
+          <h3>MSc in Computational Mechanics</h3>
+          <p class="exp-org">University of Stuttgart</p>
+          <p class="exp-date"><i class="fa fa-calendar"></i> 2020 – 2023 &nbsp;·&nbsp; Stuttgart, Germany</p>
+          <p>Master's degree in Computational Mechanics of Materials and Structures (COMMAS).</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Experimental Validation</h3>
-        <p>Laser Doppler vibrometry and data acquisition for experimental modal analysis, used to validate and update simulation models.</p>
-      </div>
-      <div class="card">
-        <h3>Soundboard Optimisation</h3>
-        <p>Optimisation of guitar plate geometry and material distribution to achieve target acoustic properties.</p>
-      </div>
+
     </div>
   </section>
 
@@ -66,27 +87,68 @@
     <div class="container">
       <h2>Publications</h2>
 
-      <div class="publication">
-        <span class="pub-year">2025</span>
-        <div class="pub-details">
+      <div class="pub-card">
+        <div class="pub-thumb">
+          <i class="fa fa-file-alt"></i>
+        </div>
+        <div class="pub-body">
           <p class="pub-title">Geometrically parameterized reduced-order finite element model for guitar soundboard shape optimization</p>
           <p class="pub-authors">Nandalal, T. D.; Cillo, P.; Ziegler, P.; Eberhard, P.</p>
           <p class="pub-venue">Acta Acustica, 2025</p>
           <div class="pub-links">
-            <a href="https://doi.org/10.1051/aacus/2025040" target="_blank" class="pub-tag">DOI</a>
+            <a href="https://doi.org/10.1051/aacus/2025040" target="_blank" class="pub-tag"><i class="fa fa-external-link-alt"></i> DOI</a>
+            <button class="pub-tag" onclick="toggleCite('cite1')"><i class="fa fa-quote-right"></i> Cite</button>
           </div>
+          <div class="cite-box" id="cite1">
+@article{nandalal2025guitar,
+  author  = {Nandalal, T. D. and Cillo, P. and Ziegler, P. and Eberhard, P.},
+  title   = {Geometrically parameterized reduced-order finite element model for guitar soundboard shape optimization},
+  journal = {Acta Acustica},
+  year    = {2025},
+  doi     = {10.1051/aacus/2025040}
+}</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- CV -->
-  <section id="cv">
+  <!-- TALKS -->
+  <section id="talks">
     <div class="container">
-      <h2>CV</h2>
-      <p>Download my full curriculum vitae below.</p>
-      <a class="btn" href="cv.pdf" target="_blank">Download CV (PDF)</a>
+      <h2>Talks</h2>
+
+      <div class="talk-card">
+        <div class="talk-date-block">
+          <span class="talk-month">2025</span>
+        </div>
+        <div class="talk-details">
+          <h3>Talk Title Goes Here</h3>
+          <p class="talk-event"><i class="fa fa-microphone"></i> Conference / Workshop Name</p>
+          <p class="talk-location"><i class="fa fa-map-marker-alt"></i> City, Country</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <div class="blog-thumb"><i class="fa fa-pen-nib"></i></div>
+          <div class="blog-body">
+            <p class="blog-date">Coming soon</p>
+            <h3>Post Title Goes Here</h3>
+            <p>A short description of the blog post topic goes here.</p>
+            <a href="#" class="pub-tag">Read more</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -94,10 +156,17 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>Institute for Engineering and Computational Mechanics (ITM)<br>
-         University of Stuttgart<br>
-         Stuttgart, Germany</p>
-      <p>Email: <a href="mailto:tharindu.nandalal@itm.uni-stuttgart.de">tharindu.nandalal@itm.uni-stuttgart.de</a></p>
+      <div class="contact-grid">
+        <div>
+          <p><i class="fa fa-building"></i> Institute for Engineering and Computational Mechanics (ITM)<br>
+          University of Stuttgart<br>
+          Pfaffenwaldring 9, 70569 Stuttgart, Germany</p>
+        </div>
+        <div>
+          <p><i class="fa fa-envelope"></i> <a href="mailto:tharindu.nandalal@itm.uni-stuttgart.de">tharindu.nandalal@itm.uni-stuttgart.de</a></p>
+          <p><i class="fab fa-github"></i> <a href="https://github.com/Tharindu-Nandalal" target="_blank">github.com/Tharindu-Nandalal</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -106,11 +175,38 @@
   </footer>
 
   <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('theme-icon');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        icon.className = 'fa fa-moon';
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        icon.className = 'fa fa-sun';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Load saved theme (default: dark)
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    document.getElementById('theme-icon').className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+
+    // Mobile nav
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('open');
     }
     function closeMenu() {
       document.getElementById('nav-links').classList.remove('open');
+    }
+
+    // Cite box toggle
+    function toggleCite(id) {
+      const box = document.getElementById(id);
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 
