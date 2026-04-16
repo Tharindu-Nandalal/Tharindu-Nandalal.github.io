@@ -278,6 +278,18 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.exp-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background-color: var(--border);
 }
 
 .exp-item {
@@ -286,6 +298,19 @@ h1 {
   padding: 1.4rem 0;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
+  position: relative;
+}
+
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: -2.05rem;
+  top: 1.8rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  border: 2px solid var(--bg);
 }
 
 .exp-item:last-child {
